@@ -16,13 +16,15 @@ editor.SetContent("It was raining.");
 history.Push(editor.CreateState());
 
 // Simulate the undo button press.
-editor.Restore(history.Pop());
+history.Pop();
+editor.Restore(history.GetLastEditorState());
 
 // Prints "They were wearing red clothes.".
 Console.WriteLine(editor.GetContent());
 
 // Simulate the undo button press.
-editor.Restore(history.Pop());
+history.Pop();
+editor.Restore(history.GetLastEditorState());
 
 // Prints "Two people walked down a street.".
 Console.WriteLine(editor.GetContent());

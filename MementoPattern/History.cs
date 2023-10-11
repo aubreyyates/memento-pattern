@@ -20,12 +20,22 @@
         }
 
         /// <summary>
-        /// Removes the last EditorState, then returns the new last EditorState.
+        /// Removes the last EditorState and returns it
         /// </summary>
-        /// <returns>The new last EditorState.</returns>
+        /// <returns>The last EditorState.</returns>
         public EditorState Pop()
         {
-            editorStates.Remove(editorStates.Last());
+            var editorState = editorStates.Last();
+            editorStates.Remove(editorState);
+            return editorState;
+        }
+
+        /// <summary>
+        /// Return the last EditorState in the list of EditorStates.
+        /// </summary>
+        /// <returns>The last EditorState.</returns>
+        public EditorState GetLastEditorState()
+        {
             return editorStates.Last();
         }
     }

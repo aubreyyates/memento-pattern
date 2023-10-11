@@ -2,7 +2,7 @@
 {
     /// <summary>
     /// The Editor class represents the element that will take in and store content. It is also known as the 
-    /// originator.
+    /// Originator.
     /// </summary>
     public class Editor
     {
